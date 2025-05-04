@@ -24,19 +24,19 @@ class Program
 
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, please enter a radius to find the area of a circle.");  //Initial question
+        Console.WriteLine("Please enter a number for the radius to find the area of a circle");  //Initial question
         
         Console.Write("Enter radius: ");                //Showing what I'm asking for
         
         string? radiusInput = Console.ReadLine();      //Asking for user input to console
         double radius;                                 //Declares radius as number
 
-            if (Double.TryParse(radiusInput, out radius))                             //Convert string input to Int
+            if (Double.TryParse(radiusInput, out radius))                             //Convert string input to double
             {
             Console.WriteLine($"The area of the circle is: {CircleArea(radius)}");    //Call circle method
             }
         
-        Console.WriteLine("Please enter the base, and then the height, to find the area of a triangle.");
+        Console.WriteLine("Please enter a number for  the base, and then the height, to find the area of a triangle");
         
         Console.Write("Base: ");
         string? baseInput = Console.ReadLine();
@@ -44,29 +44,43 @@ class Program
         Console.Write("Height: ");
         string? heightInput = Console.ReadLine();
 
-        double baseOne, height = 0;                // = 0 so height can be initialized
+        double baseOne, height = 0;                // = 0 to be initialized
         
             if (Double.TryParse(baseInput, out baseOne) && Double.TryParse(heightInput, out height));
             {
                 Console.WriteLine($"The area of the triangle is: {TriangleArea(baseOne, height)}");
             }
+            
+        Console.WriteLine("Please enter a number for the length and for the width to find the area of a rectangle");
         
+        Console.Write("Length: ");
+        string? lengthInput = Console.ReadLine();
         
+        Console.Write("Width: ");
+        string? widthInput = Console.ReadLine();
+
+        double length, width = 0;                   // = 0 to be initialized
+
+            if (Double.TryParse(lengthInput, out length) && Double.TryParse(widthInput, out width)) ;
+            {
+                Console.WriteLine($"The area of the rectangle is: {RectangleArea(length, width)}");
+            }
         
-       
+        Console.WriteLine("Please enter a number for a side to find the area of a square");
         
-        //string? lengthInput=Console.ReadLine();
-       // string? widthInput = Console.ReadLine();
+        Console.Write("Side: ");
+        string? sideInput = Console.ReadLine();
+
+        double side;
         
+            if (Double.TryParse(sideInput, out side))
+            {
+                Console.WriteLine($"The area of the square is: {SquareArea(side)}");
+            }
+
+
+
+
         
-        
-       // Console.WriteLine($"Rectangle Area: {RectangleArea()}");   //Call rectangle method
-        
-       //3
-       //string? sideInput = Console.ReadLine();
-        
-       
-        
-        //Console.WriteLine($"Square Area: {SquareArea()}");          //Call square method
     }
 }
