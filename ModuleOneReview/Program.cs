@@ -78,7 +78,7 @@ class Program
                 Console.WriteLine($"The area of the square is: {SquareArea(side)}");
             }
 
-
+                    //Probably could have made it shorter, but this was how I knew it would work with my experience.  Feedback is greatly appreciated.
 
 
         
